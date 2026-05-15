@@ -1,0 +1,26 @@
+# LLM Security Gateway - Central Configuration
+gateway:
+  version: "1.0.0"
+  debug: true
+
+languages:
+  supported: ["en", "ur", "ko"] # English, Urdu, Korean
+  fallback: "en"
+
+# Updated Calibration Parameters
+thresholds:
+  rule_trigger_limit: 1
+  semantic_confidence_threshold: 0.58  # Catches all paraphrased and multilingual vectors
+  pii_confidence_threshold: 0.60
+
+policy_engine:
+  weights:
+    pii_weight: 0.25
+    secret_weight: 0.35
+  boundaries:
+    block_threshold: 0.58  # Tight boundary for malicious prompts
+    mask_threshold: 0.40
+
+logging:
+  audit_log_path: "logs/audit.json"
+  console_output: true

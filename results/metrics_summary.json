@@ -1,0 +1,17 @@
+{
+    "dataset_total_rows": 152,
+    "confusion_matrix": {
+        "true_positives": 72,
+        "false_positives": 1,
+        "true_negatives": 79,
+        "false_negatives": 0
+    },
+    "accuracy": 0.9934,
+    "precision": 0.9863,
+    "recall": 1.0,
+    "f1_score": 0.9931,
+    "latency_metrics_ms": {
+        "mean": 20.54,
+        "p95": 25.22
+    }
+}
